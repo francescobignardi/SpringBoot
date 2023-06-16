@@ -57,10 +57,11 @@ private List<Meal> meals = new ArrayList<>();
     }
 
     @PostMapping("meal/{name}/price")                                                           //Non va
-    public ResponseEntity<String> updatePriceByName(@PathVariable String name, @RequestBody Double price){
+    public ResponseEntity<String> updatePriceByName(@PathVariable String name, @RequestBody Meal meal){
         for(Meal m : meals){
-            if(m.getName().equals(name)){
-                m.setPrice(price);
+            if(m.getName().equals(name) && m.getPrice() != meal.getPrice()){
+                meals.remove(m);
+                meals.add(meal);
             }
         }
         return ResponseEntity.ok("Prezzo del pasto selezionato aggiornato");
