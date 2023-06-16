@@ -2,12 +2,12 @@ package com.example.springboot.Esercizio2;
 
 public class Meal {
     private String name;
-    private Integer calories;
+    private String description;
     private Double price;
 
-    public Meal(String name, Integer calories, Double price) {
+    public Meal(String name, String description, Double price) {
         this.name = name;
-        this.calories = calories;
+        this.description = description;
         this.price = price;
     }
 
@@ -15,11 +15,23 @@ public class Meal {
         return name;
     }
 
-    public Integer getCalories() {
-        return calories;
+    public String getDescription() {
+        return description;
     }
 
     public Double getPrice() {
         return price;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
     }
 }
