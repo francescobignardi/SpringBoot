@@ -1,4 +1,4 @@
-package com.example.springboot;
+package com.example.springboot.Esercizio1;
 
 import com.sun.net.httpserver.Authenticator;
 import jdk.jshell.Snippet;
