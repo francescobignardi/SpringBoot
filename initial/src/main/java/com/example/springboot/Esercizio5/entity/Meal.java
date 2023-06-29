@@ -1,16 +1,19 @@
-package com.example.springboot.Esercizio2;
-
+package com.example.springboot.Esercizio5.entity;
 
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "Meal")
 public class Meal {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "description")
     private String description;
+    @Column(name = "price")
     private Double price;
 
     public Meal(String name, String description, Double price) {
@@ -55,3 +58,4 @@ public class Meal {
         this.price = price;
     }
 }
+

@@ -1,7 +1,5 @@
 package com.example.springboot.Esercizio2;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
